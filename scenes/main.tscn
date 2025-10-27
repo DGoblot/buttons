@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=4 format=3 uid="uid://016gu0llc2ce"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_no8bm"]
+[ext_resource type="PackedScene" uid="uid://dqb7bpx0rd3n5" path="res://scenes/cube.tscn" id="1_o5qli"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wfyh"]
+size = Vector3(2.0673828, 0.20678711, 1.9807129)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sugp2"]
 
 [node name="Node3D" type="Node3D"]
 
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_0wfyh")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_no8bm")
+mesh = SubResource("PlaneMesh_sugp2")
+
+[node name="Cube" parent="." instance=ExtResource("1_o5qli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005543053, 1.9157894, -0.14947617)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.87327945, 0.48721963, 0, -0.48721963, 0.87327945, 0, 2.3386467, 3.4905853)
