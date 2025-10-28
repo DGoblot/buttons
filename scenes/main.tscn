@@ -63,7 +63,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.913424, 0, 2.488149)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6472561, 0, 1.9489369)
 
 [node name="Poussoire" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.235117, 0, 2.5964758)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.461369, 0, 2.5964758)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.8732795, 0.48721963, 0, -0.48721966, 0.8732795, 0.336236, 2.3386467, 4.6456156)
