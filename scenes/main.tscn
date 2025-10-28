@@ -38,19 +38,19 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="endButton" parent="." instance=ExtResource("1_o5qli")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -4.427707, 0.7360436, 3.9673386)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.427707, 0.5056131, 3.721713)
 
 [node name="Flipflop1" parent="." instance=ExtResource("2_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7211304, 0.78078485, 0.68786526)
 
 [node name="Slider3" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.895303, 0.5018424, 2.2387092)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3858124, 0.5018424, 2.1994753)
 
 [node name="Slider2" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5285056, 0.5043399, 2.2457037)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.019015, 0.5043399, 2.2064698)
 
 [node name="Slider1" parent="." instance=ExtResource("3_sugp2")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.1251698, 0.44125086, 3.3479822)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.61567914, 0.44125086, 3.3087482)
 
 [node name="Flipflop5" parent="." instance=ExtResource("5_tbgi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.426641, 0.4912175, 3.9961758)
@@ -62,10 +62,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9990957, 0.4894173, 3.9965
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5710433, 0.48972565, 3.9979405)
 
 [node name="Flipflop3" parent="." instance=ExtResource("6_tefeu")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5995908, 0.4752015, 1.9201725)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.09010017, 0.4752015, 1.8809385)
 
 [node name="Tournant1" parent="." instance=ExtResource("7_tipki")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1776595, 0.44529146, 1.7813427)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6681689, 0.44529146, 1.7421088)
 
 [node name="Tournant4" parent="." instance=ExtResource("8_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05097103, 0.482076, 4.1836824)
@@ -74,7 +74,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05097103, 0.482076, 4.1836
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7089639, 0.4787699, 4.1823444)
 
 [node name="Tournant3" parent="." instance=ExtResource("9_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68725777, 0.46865225, 3.1517034)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82223284, 0.46865225, 3.1124694)
 
 [node name="Poussoire5" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4396772, 0.47862995, 3.1035595)
@@ -103,38 +103,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4425461, 0.48079932, 2.175
 [node name="Poussoire12" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3566895, 0.48067105, 1.2426643)
 
-[node name="Poussoire13" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.358942, 0.47897494, 3.11763)
-
-[node name="Poussoire18" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.309966, 0.48062402, 3.1076798)
-
 [node name="Poussoire16" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.308226, 0.48205703, 2.1392891)
 
 [node name="Poussoire17" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.259867, 0.48093432, 2.1479938)
 
+[node name="Poussoire13" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4472787, 0.4809487, 0.2986951)
+
+[node name="Poussoire18" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4947767, 0.4806586, 0.30295277)
+
+[node name="Poussoire19" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3989198, 0.47982597, 0.30739975)
+
+[node name="Poussoire20" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.309698, 0.4824164, 0.30406094)
+
+[node name="Poussoire21" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.359686, 0.4821263, 0.30831861)
+
+[node name="Poussoire22" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.261339, 0.48129368, 0.3127656)
+
 [node name="Poussoire14" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2583427, 0.47983843, 1.2471113)
-
-[node name="Poussoire7" parent="Poussoire14" instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.811064, 0.0011102557, -0.94841623)
-
-[node name="Poussoire8" parent="Poussoire14" instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.763566, 0.0008201599, -0.94415855)
-
-[node name="Poussoire9" parent="Poussoire14" instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.859423, -1.2457371e-05, -0.9397116)
-
-[node name="Poussoire11" parent="Poussoire14" instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.94864464, 0.0025779605, -0.9430504)
-
-[node name="Poussoire12" parent="Poussoire14" instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8986568, 0.0022878647, -0.9387927)
-
-[node name="Poussoire14" parent="Poussoire14" instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0029964447, 0.0014552474, -0.9343457)
 
 [node name="Poussoire3" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3913186, 0.47750723, 3.1122642)
@@ -149,9 +143,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39147, 0.46632135, 2.15955
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4918733, 0.5050795, 4.040327)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.61014515, 0.7922896, 0, -0.7922896, 0.61014515, -0.99898005, 4.2266655, 4.6456156)
+transform = Transform3D(1, 0, 0, 0, 0.61014515, 0.7922896, 0, -0.7922896, 0.61014515, -1.8628969, 4.2266655, 4.9763374)
+fov = 65.0
 
 [node name="FmodListener3D" type="FmodListener3D" parent="Camera3D"]
 
 [node name="table" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.674937, 0.4789436, 2.4553013)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.539486, 0.4789436, 2.4553013)
