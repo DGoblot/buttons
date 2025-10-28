@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://lq3e2sh6jjmf"]
+
+[ext_resource type="PackedScene" uid="uid://dvw31ccatngme" path="res://assets/meshs/red button.glb" id="1_8n51h"]
+[ext_resource type="Script" uid="uid://byg8nda8vr3k1" path="res://scripts/click_button_end.gd" id="2_8n51h"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qkwot"]
+height = 1.3540039
+radius = 1.1601563
+
+[sub_resource type="LabelSettings" id="LabelSettings_8n51h"]
+font_size = 100
+font_color = Color(1, 0, 0, 1)
+
+[node name="endButton" type="Node3D"]
+
+[node name="red button" parent="." instance=ExtResource("1_8n51h")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="red button"]
+script = ExtResource("2_8n51h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="red button/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008056641, 0)
+shape = SubResource("CylinderShape3D_qkwot")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "23.98"
+label_settings = SubResource("LabelSettings_8n51h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="red button"]

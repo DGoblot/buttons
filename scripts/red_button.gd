@@ -4,6 +4,5 @@ extends Node3D
 @onready var mesh = $"../red button2/Red Button"
 
 func _on_rigid_body_3d_body_entered(body: Node) -> void:
-	print("wow2")
 	anim.play("Push")
 	body.queue_free()

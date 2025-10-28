@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://6pgni2qgrwf7"]
+[gd_scene load_steps=15 format=3 uid="uid://cb6japbm2v3yl"]
 
 [ext_resource type="Texture2D" uid="uid://dfxw06fitscoa" path="res://assets/images/lythwood_terrace_1k.hdr" id="1_yaf02"]
 [ext_resource type="Material" uid="uid://cgnqrxx3hb28q" path="res://assets/materials/Glass.tres" id="2_nxf8j"]
