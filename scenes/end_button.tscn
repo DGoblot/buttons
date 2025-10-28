@@ -48,4 +48,8 @@ label_settings = SubResource("LabelSettings_8n51h")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/STOP"
+event_guid = "{360d81d7-ce34-4418-9793-bdba916517cd}"
+
 [editable path="red button"]
