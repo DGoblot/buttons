@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpi1ln8x702ip"]
+
+[ext_resource type="PackedScene" uid="uid://cqps1veklbydv" path="res://assets/meshs/bouton tournant 2 v2.glb" id="1_goa23"]
+[ext_resource type="Script" uid="uid://djuc55cm3rdiy" path="res://scripts/click_button_tournant2.gd" id="2_1j5jo"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tg4ww"]
+height = 0.23544312
+radius = 0.17089844
+
+[node name="Tournant2" type="Node3D"]
+
+[node name="bouton tournant 2 v2" parent="." instance=ExtResource("1_goa23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046446204, -1.1920929e-07, 3.5937564)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="bouton tournant 2 v2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051766634, 0, -3.6318953)
+script = ExtResource("2_1j5jo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bouton tournant 2 v2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038140744, 0.20192897, 0.040918723)
+shape = SubResource("CylinderShape3D_tg4ww")
+
+[editable path="bouton tournant 2 v2"]

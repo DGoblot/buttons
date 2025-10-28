@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct5kvv76udp3e"]
+
+[ext_resource type="PackedScene" uid="uid://bbv1b8onfuamh" path="res://assets/meshs/bouton poussoire v2.glb" id="1_oivtx"]
+[ext_resource type="Script" uid="uid://bvo7t3y5d0squ" path="res://scripts/click_button_poussoire.gd" id="2_oivtx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_llp4m"]
+size = Vector3(0.48266602, 0.22164917, 0.48242188)
+
+[node name="Poussoire" type="Node3D"]
+
+[node name="bouton poussoire v2" parent="." instance=ExtResource("1_oivtx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3484011, 0, 6.5692887)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="bouton poussoire v2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3537215, -1.1920929e-07, -6.6074276)
+script = ExtResource("2_oivtx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bouton poussoire v2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0059432983, 0.09529114, 0.02053833)
+shape = SubResource("BoxShape3D_llp4m")
+
+[editable path="bouton poussoire v2"]

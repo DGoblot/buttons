@@ -1,9 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=14 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://c0mumdft468mc" path="res://scenes/slider2.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dt8vqfi0wyxon" path="res://scenes/flipflop1.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://b4xc76j6rfd28" path="res://scenes/slider1.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bmpp3rmo2bl6r" path="res://scenes/flipflop2.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://c5ddnrwn7rwa1" path="res://scenes/flipflop3.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://ct5kvv76udp3e" path="res://scenes/poussoire.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://12w04pn76ahp" path="res://scenes/tournant1.tscn" id="7_tipki"]
+[ext_resource type="PackedScene" uid="uid://bpi1ln8x702ip" path="res://scenes/tournant2.tscn" id="8_85g3d"]
+[ext_resource type="PackedScene" uid="uid://jylipnnlv78y" path="res://scenes/tournant3.tscn" id="9_choun"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -35,13 +41,34 @@ shadow_enabled = true
 [node name="Flipflop1" parent="." instance=ExtResource("2_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4686782, 0, 0.68786526)
 
+[node name="Slider3" parent="." instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5701506, 0, 1.0861566)
+
 [node name="Slider2" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7755957)
+
+[node name="Slider1" parent="." instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48449135, 0, 2.5230827)
+
+[node name="Flipflop2" parent="." instance=ExtResource("5_tbgi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4616568, 0, 0.9941125)
+
+[node name="Flipflop3" parent="." instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0826979, 0, 1.4054892)
+
+[node name="Tournant1" parent="." instance=ExtResource("7_tipki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99884844, 0, 2.4485152)
+
+[node name="Tournant2" parent="." instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.913424, 0, 2.488149)
+
+[node name="Tournant3" parent="." instance=ExtResource("9_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6472561, 0, 1.9489369)
+
+[node name="Poussoire" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.235117, 0, 2.5964758)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.8732795, 0.48721963, 0, -0.48721966, 0.8732795, 0.336236, 2.3386467, 4.6456156)
 
 [node name="FmodListener3D" type="FmodListener3D" parent="Camera3D"]
-
-[node name="Slider1" parent="." instance=ExtResource("3_sugp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48449135, 0, 2.5230827)

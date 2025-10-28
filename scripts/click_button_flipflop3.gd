@@ -1,22 +1,15 @@
 extends StaticBody3D
 
 @onready var anim = $"../AnimationPlayer"
-var state = "on"
+var state = "off"
 
 func _input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventMouseButton:
 		print("Mouse click/unclicked at: ", event.position, " shape:", shape_idx)
 		if !anim.is_playing():
 			if state == "off":
-				anim.play("Slider 2 Off")
+				anim.play("Flip 3")
 				state = "on"
 			else:
-				anim.play("Slider 2 On")
+				anim.play("Flop 3")
 				state = "off"
-
-func _process(delta: float) -> void:
-	if anim.is_playing():
-		if state == "off":
-			print(anim.current_animation_position * (1/anim.current_animation_length))
-		else:
-			print(1 - anim.current_animation_position * (1/anim.current_animation_length))
