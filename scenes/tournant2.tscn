@@ -20,4 +20,12 @@ script = ExtResource("2_1j5jo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038140744, 0.20192897, 0.040918723)
 shape = SubResource("CylinderShape3D_tg4ww")
 
+[node name="Ambiance" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Ambiences/Beach"
+event_guid = "{7cbbd16b-48ab-42f3-b15a-1609c6b54db7}"
+
+[node name="Click" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/Switch"
+event_guid = "{6f17bc15-a906-4baa-9405-6a4929ca099e}"
+
 [editable path="bouton tournant 2 v2"]

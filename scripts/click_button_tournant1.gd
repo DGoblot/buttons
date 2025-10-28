@@ -1,6 +1,8 @@
 extends StaticBody3D
 
 @onready var anim = $"../AnimationPlayer"
+@onready var click = $"../../Click"
+@onready var ambiance = $"../../Ambiance"
 var state = "off"
 
 func _input_event(camera, event, click_position, click_normal, shape_idx):
@@ -10,6 +12,10 @@ func _input_event(camera, event, click_position, click_normal, shape_idx):
 			if state == "off":
 				anim.play("Tournant 1 On")
 				state = "on"
+				ambiance.play()
+				click.play()
 			else:
 				anim.play("Tournant 1 Off")
 				state = "off"
+				ambiance.stop()
+				click.play()

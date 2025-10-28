@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://br1unpt1l6u8i"]
+
+[ext_resource type="PackedScene" uid="uid://dt8vqfi0wyxon" path="res://scenes/flipflop1.tscn" id="1_errlg"]
+[ext_resource type="Script" uid="uid://dmk04wl60twoh" path="res://scripts/UI_sound.gd" id="2_bl13t"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bl13t"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_iyx0m"]
+sky_material = SubResource("ProceduralSkyMaterial_bl13t")
+
+[sub_resource type="Environment" id="Environment_74lek"]
+background_mode = 2
+sky = SubResource("Sky_iyx0m")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+
+[node name="Flipflop1" parent="." instance=ExtResource("1_errlg")]
+script = ExtResource("2_bl13t")
+sound = "event:/UI/Switch"
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Flipflop1"]
+event_name = "event:/UI/Switch"
+event_guid = "{6f17bc15-a906-4baa-9405-6a4929ca099e}"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_74lek")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30833435, 0.61001)
+
+[node name="FmodListener3D" type="FmodListener3D" parent="Camera3D"]

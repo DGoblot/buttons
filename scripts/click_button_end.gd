@@ -4,6 +4,9 @@ extends StaticBody3D
 @onready var label = $"../../../../ColorRect/Label"
 @onready var animBox = $"../../../boite v2/AnimationPlayer"
 @onready var animButton = $"../../AnimationPlayer"
+@onready var stop = $"../../../../Stop"
+@onready var open = $"../../../../CasingOpen"
+@onready var close = $"../../../../CasingClose"
 var current_step := 0
 var t_total = 0.0
 var t_fade = 0.0
@@ -31,12 +34,14 @@ func _input_event(camera, event, click_position, click_normal, shape_idx):
 					current_step = 1
 					waiting_for_button = true
 					wait_timer = 0.0
+					open.play()
 				1:
 					animButton.play("Push Bouton Rouge")
 					current_step = 2
 					end = true
 					waiting_for_button = false
 					blackScreen.visible = true
+					stop.play()
 			
 func _process(delta: float) -> void:
 	if !end:
@@ -47,6 +52,7 @@ func _process(delta: float) -> void:
 				waiting_for_button = false
 				current_step = 0
 				animBox.play_backwards("Open Up")
+				close.play()
 	else:
 		t_fade += delta * speed
 		blackScreen.color = Color(Color.BLACK, t_fade)

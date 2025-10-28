@@ -19,4 +19,8 @@ script = ExtResource("2_esdc5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03955078, 0.10635376, 0.04711914)
 shape = SubResource("BoxShape3D_llp4m")
 
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/Slider"
+event_guid = "{10464fc3-393b-4dae-84a2-25636e5bb22e}"
+
 [editable path="slider 1 v2"]

@@ -23,4 +23,12 @@ script = ExtResource("2_tg4ww")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024073854, 0.20192897, 0.08305468)
 shape = SubResource("CylinderShape3D_tg4ww")
 
+[node name="Ambiance" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/SliderTik"
+event_guid = "{9e6170b7-a8e8-451c-b5b7-5d645608bebb}"
+
+[node name="Click" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/SliderTik"
+event_guid = "{9e6170b7-a8e8-451c-b5b7-5d645608bebb}"
+
 [editable path="bouton tournant 1 v2"]
