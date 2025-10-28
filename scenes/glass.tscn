@@ -1,3 +1,89 @@
-[gd_scene format=3 uid="uid://6pgni2qgrwf7"]
+[gd_scene load_steps=15 format=3 uid="uid://6pgni2qgrwf7"]
+
+[ext_resource type="Texture2D" uid="uid://dfxw06fitscoa" path="res://assets/images/lythwood_terrace_1k.hdr" id="1_yaf02"]
+[ext_resource type="Material" uid="uid://cgnqrxx3hb28q" path="res://assets/materials/Glass.tres" id="2_nxf8j"]
+[ext_resource type="PackedScene" uid="uid://ocod7rbwnsn6" path="res://assets/meshs/new red button/red button v2.glb" id="3_71jq8"]
+[ext_resource type="PackedScene" uid="uid://dvw31ccatngme" path="res://assets/meshs/red button.glb" id="4_71jq8"]
+[ext_resource type="Script" uid="uid://bdrtc086xgydw" path="res://scripts/click_button.gd" id="5_2h05u"]
+
+[sub_resource type="GDScript" id="GDScript_71jq8"]
+script/source = "extends Node3D
+
+func _input_event(camera, event, click_position, click_normal, shape_idx):
+	if (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
+		print(\"cell: \" + str())
+"
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2h05u"]
+panorama = ExtResource("1_yaf02")
+
+[sub_resource type="Sky" id="Sky_vd0xx"]
+sky_material = SubResource("PanoramaSkyMaterial_2h05u")
+
+[sub_resource type="Environment" id="Environment_6cmal"]
+background_mode = 2
+sky = SubResource("Sky_vd0xx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hspww"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_gtrt1"]
+material = SubResource("StandardMaterial3D_hspww")
+
+[sub_resource type="BoxMesh" id="BoxMesh_coerm"]
+material = ExtResource("2_nxf8j")
+size = Vector3(0.05, 1.435, 1.04)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71jq8"]
+size = Vector3(0.4501953, 0.2154541, 0.43652344)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vd0xx"]
+size = Vector3(2.2861328, 1.1671143, 2.1864014)
 
 [node name="Glass" type="Node3D"]
+script = SubResource("GDScript_71jq8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6cmal")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.91535366, 0.40265083, 0, -0.40265083, 0.91535366, 3.1002164, 1.7056688, 0.4541203)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_gtrt1")
+
+[node name="box" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1418463, 0, 0)
+material_override = ExtResource("2_nxf8j")
+mesh = SubResource("BoxMesh_coerm")
+
+[node name="red button v2" parent="." instance=ExtResource("3_71jq8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.3375525, 1.0897601, -0.8002682)
+
+[node name="Boite" parent="red button v2/Axe Boite" index="0"]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.0045745373, -0.010926962, 0.02450633)
+material_override = ExtResource("2_nxf8j")
+
+[node name="Boutton Rouge" parent="red button v2/Axe Boite" index="1"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.1235632, 0.47553277, 6.7055225e-08)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="red button v2/Axe Boite/Boutton Rouge" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9604645e-08, 0.013788223, 0)
+script = ExtResource("5_2h05u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="red button v2/Axe Boite/Boutton Rouge/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0115356445, 0)
+shape = SubResource("BoxShape3D_71jq8")
+
+[node name="red button" parent="." instance=ExtResource("4_71jq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3004055, 0, -2.8847704)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="red button"]
+script = ExtResource("5_2h05u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="red button/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08355713, 0.026428223)
+shape = SubResource("BoxShape3D_vd0xx")
+
+[editable path="red button v2"]
+[editable path="red button"]

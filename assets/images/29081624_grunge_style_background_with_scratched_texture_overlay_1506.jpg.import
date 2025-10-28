@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfxw06fitscoa"
-path.bptc="res://.godot/imported/lythwood_terrace_1k.hdr-87466a539a08cc8a1c8adea9d0d13334.bptc.ctex"
+uid="uid://di5dvxmg0gp43"
+path.s3tc="res://.godot/imported/29081624_grunge_style_background_with_scratched_texture_overlay_1506.jpg-bc1aec1852c972c1c23e2612870c86f7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/lythwood_terrace_1k.hdr"
-dest_files=["res://.godot/imported/lythwood_terrace_1k.hdr-87466a539a08cc8a1c8adea9d0d13334.bptc.ctex"]
+source_file="res://assets/images/29081624_grunge_style_background_with_scratched_texture_overlay_1506.jpg"
+dest_files=["res://.godot/imported/29081624_grunge_style_background_with_scratched_texture_overlay_1506.jpg-bc1aec1852c972c1c23e2612870c86f7.s3tc.ctex"]
 
 [params]
 

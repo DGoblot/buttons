@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="PackedScene" uid="uid://dvw31ccatngme" path="res://assets/meshs/red button.glb" id="1_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://dqb7bpx0rd3n5" path="res://scenes/cube.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" path="res://scenes/cube.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://c8jxymso4y5p8" path="res://scripts/fmod_event_emitter_3d.gd" id="2_sugp2"]
-[ext_resource type="Script" uid="uid://b614ulh2nfrvl" path="res://scripts/red_button.gd" id="3_jyhfs"]
+[ext_resource type="Script" path="res://scripts/red_button.gd" id="3_jyhfs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -59,7 +59,6 @@ max_contacts_reported = 1
 shape = SubResource("CylinderShape3D_tbgi4")
 
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
-event_name = "event:/TEST"
 event_guid = "{293d04d4-62fb-4723-9f64-c470fe752aca}"
 script = ExtResource("2_sugp2")
 
