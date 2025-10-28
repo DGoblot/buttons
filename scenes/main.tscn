@@ -1,8 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=17 format=3 uid="uid://016gu0llc2ce"]
 
+[ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://c0mumdft468mc" path="res://scenes/slider2.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dt8vqfi0wyxon" path="res://scenes/flipflop1.tscn" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://bdk4tt1411uc8" path="res://scripts/directional_light_3d.gd" id="2_trceg"]
 [ext_resource type="PackedScene" uid="uid://b4xc76j6rfd28" path="res://scenes/slider1.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bmpp3rmo2bl6r" path="res://scenes/flipflop2.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://c5ddnrwn7rwa1" path="res://scenes/flipflop3.tscn" id="6_tefeu"]
@@ -26,6 +28,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_eb6dy")
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="."]
 bank_paths = ["res://assets/banks/Desktop/Master.strings.bank", "res://assets/banks/Desktop/Master.bank"]
@@ -36,49 +39,64 @@ environment = SubResource("Environment_sugp2")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
+script = ExtResource("2_trceg")
 
 [node name="endButton" parent="." instance=ExtResource("1_o5qli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.427707, 0.5056131, 3.721713)
 
-[node name="Flipflop1" parent="." instance=ExtResource("2_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7211304, 0.78078485, 0.68786526)
+[node name="FlipflopJaune" parent="." instance=ExtResource("2_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10800457, 0.44019413, 2.7692738)
 
-[node name="Slider3" parent="." instance=ExtResource("2_0wfyh")]
+[node name="SliderJauneA" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3858124, 0.5018424, 2.1994753)
 
-[node name="Slider2" parent="." instance=ExtResource("2_0wfyh")]
+[node name="SliderJauneB" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.019015, 0.5043399, 2.2064698)
 
-[node name="Slider1" parent="." instance=ExtResource("3_sugp2")]
+[node name="SliderBleu" parent="." instance=ExtResource("3_sugp2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.61567914, 0.44125086, 3.3087482)
 
-[node name="Flipflop5" parent="." instance=ExtResource("5_tbgi4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.426641, 0.4912175, 3.9961758)
-
-[node name="Flipflop4" parent="." instance=ExtResource("5_tbgi4")]
+[node name="FlipflopBleuA" parent="." instance=ExtResource("5_tbgi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9990957, 0.4894173, 3.9965305)
 
-[node name="Flipflop2" parent="." instance=ExtResource("5_tbgi4")]
+[node name="FlipflopBleuB" parent="." instance=ExtResource("5_tbgi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5710433, 0.48972565, 3.9979405)
 
-[node name="Flipflop3" parent="." instance=ExtResource("6_tefeu")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.09010017, 0.4752015, 1.8809385)
+[node name="FlipflopVert" parent="." instance=ExtResource("6_tefeu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.16611463, 0.4752015, 3.3989613)
 
-[node name="Tournant1" parent="." instance=ExtResource("7_tipki")]
+[node name="TournantVert" parent="." instance=ExtResource("7_tipki")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60624874, 0.44529146, 1.7421088)
 
 [node name="TournantRougeA" parent="." instance=ExtResource("8_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05097103, 0.482076, 4.1836824)
 
+[node name="Ambiance" parent="TournantRougeA" index="1"]
+event_name = "event:/Ambiences/Autorote"
+event_guid = "{bac99206-1911-4bdc-a72c-066372bf6628}"
+
 [node name="TournantRougeB" parent="." instance=ExtResource("8_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7089639, 0.4787699, 4.1823444)
 
-[node name="Ambiance" parent="TournantRougeB" index="1"]
+[node name="CollisionShape3D" parent="TournantRougeB/bouton tournant 2 v2/StaticBody3D" index="0"]
+transform = Transform3D(0.9999656, 0, -0.008290219, 0, 1, 0, 0.008290219, 0, 0.9999656, 0.038140774, 0.20192897, 0.040918827)
+
+[node name="TournantRougeC" parent="." instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3510387, 0.47874492, 4.189648)
+
+[node name="Ambiance" parent="TournantRougeC" index="1"]
 event_name = "event:/Ambiences/Forest"
 event_guid = "{cb41e66e-b5b0-4acd-940c-216ee7448987}"
 
-[node name="Tournant3" parent="." instance=ExtResource("9_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82223284, 0.46865225, 3.1124694)
+[node name="TournantRougeD" parent="." instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9745352, 0.4724481, 4.1953526)
+
+[node name="Ambiance" parent="TournantRougeD" index="1"]
+event_name = "event:/Ambiences/PAK"
+event_guid = "{8568682d-473b-4cda-9bff-136b304f7668}"
+
+[node name="TournantJaune" parent="." instance=ExtResource("9_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65889126, 0.46865225, 3.0784507)
 
 [node name="PoussoireA" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4871745, 0.47833985, 3.1078172)
@@ -201,12 +219,38 @@ fov = 65.0
 [node name="table" parent="." instance=ExtResource("11_ya4ey")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.539486, 0.4789436, 2.4553013)
 
-[editable path="Tournant1"]
-[editable path="Tournant1/bouton tournant 1 v2"]
+[connection signal="lightBlue" from="FlipflopJaune/bouton FlipFlop 1 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_blue"]
+[connection signal="lightGreen" from="FlipflopVert/bouton FlipFlop 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_green"]
+[connection signal="clicked" from="TournantRougeA/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeA/bouton tournant 2 v2/StaticBody3D" to="TournantRougeC/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeA/bouton tournant 2 v2/StaticBody3D" to="TournantRougeD/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeB/bouton tournant 2 v2/StaticBody3D" to="TournantRougeA/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeB/bouton tournant 2 v2/StaticBody3D" to="TournantRougeC/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeB/bouton tournant 2 v2/StaticBody3D" to="TournantRougeD/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeC/bouton tournant 2 v2/StaticBody3D" to="TournantRougeA/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeC/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeC/bouton tournant 2 v2/StaticBody3D" to="TournantRougeD/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeA/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeC/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
+[connection signal="lightRed" from="TournantJaune/bouton tournant 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_red"]
+
+[editable path="FlipflopJaune"]
+[editable path="FlipflopJaune/bouton FlipFlop 1 v2"]
+[editable path="FlipflopVert"]
+[editable path="FlipflopVert/bouton FlipFlop 3 v2"]
+[editable path="TournantVert"]
+[editable path="TournantVert/bouton tournant 1 v2"]
 [editable path="TournantRougeA"]
 [editable path="TournantRougeA/bouton tournant 2 v2"]
 [editable path="TournantRougeB"]
 [editable path="TournantRougeB/bouton tournant 2 v2"]
+[editable path="TournantRougeC"]
+[editable path="TournantRougeC/bouton tournant 2 v2"]
+[editable path="TournantRougeD"]
+[editable path="TournantRougeD/bouton tournant 2 v2"]
+[editable path="TournantJaune"]
+[editable path="TournantJaune/bouton tournant 3 v2"]
 [editable path="PoussoireA"]
 [editable path="PoussoireA/bouton poussoire v2"]
 [editable path="PoussoireB"]

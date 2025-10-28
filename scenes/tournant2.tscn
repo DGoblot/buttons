@@ -12,6 +12,9 @@ radius = 0.17089844
 [node name="bouton tournant 2 v2" parent="." instance=ExtResource("1_goa23")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046446204, -1.1920929e-07, 3.5937564)
 
+[node name="Bouton Tournant 2" parent="bouton tournant 2 v2/Base Tournant 2" index="0"]
+transform = Transform3D(-1.6292068e-07, 0, -1, 0, 1, 0, 1, 0, -1.6292068e-07, 0, 0.23191357, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="bouton tournant 2 v2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051766634, 0, -3.6318953)
 script = ExtResource("2_1j5jo")
