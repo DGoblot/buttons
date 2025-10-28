@@ -1,7 +1,10 @@
 extends StaticBody3D
 
-@onready var blackScreen = $"../../ColorRect"
-@onready var label = $"../../ColorRect/Label"
+@onready var blackScreen = $"../../../../ColorRect"
+@onready var label = $"../../../../ColorRect/Label"
+@onready var animBox = $"../../../boite v2/AnimationPlayer"
+@onready var animButton = $"../../AnimationPlayer"
+var current_step := 0
 var t_total = 0.0
 var t_fade = 0.0
 var speed = 1.0
@@ -17,11 +20,17 @@ func _ready() -> void:
 
 func _input_event(camera, event, click_position, click_normal, shape_idx):
 	if !end:
-		if event is InputEventMouseButton:
+		if event is InputEventMouseButton and event.pressed:
 			print("Mouse click/unclicked at: ", event.position, " shape:", shape_idx)
-			$"../AnimationPlayer".play("Push")
-			end = true
-			blackScreen.visible = true
+			match current_step:
+				0:
+					animBox.play("Open Up")
+					current_step = 1
+				1:
+					animButton.play("Push Bouton Rouge")
+					current_step = 2
+					end = true
+					blackScreen.visible = true
 			
 			
 func _process(delta: float) -> void:
