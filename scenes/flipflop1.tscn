@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt8vqfi0wyxon"]
+
+[ext_resource type="PackedScene" uid="uid://duc3k5s6h1msp" path="res://assets/meshs/bouton FlipFlop 1 v2.glb" id="1_6ef55"]
+[ext_resource type="Script" uid="uid://cjqvevtgv175m" path="res://scripts/click_button_flipflop1.gd" id="2_6ef55"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_llp4m"]
+size = Vector3(0.1459961, 0.18365479, 0.19604492)
+
+[node name="Flipflop1" type="Node3D"]
+
+[node name="bouton FlipFlop 1 v2" parent="." instance=ExtResource("1_6ef55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91813684, 0, 4.211901)
+
+[node name="FlipFlop 1" parent="bouton FlipFlop 1 v2/Base FlipFlop 1" index="0"]
+transform = Transform3D(0.8660254, -1.7285151e-07, 0.50000006, 1.6273671e-07, 1, 6.3834776e-08, -0.50000006, 2.6085825e-08, 0.8660254, 0.055610955, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="bouton FlipFlop 1 v2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.90477085, 0, -4.2327433)
+script = ExtResource("2_6ef55")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bouton FlipFlop 1 v2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012939453, 0.10635376, 0.0078125)
+shape = SubResource("BoxShape3D_llp4m")
+
+[editable path="bouton FlipFlop 1 v2"]

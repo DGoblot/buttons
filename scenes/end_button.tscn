@@ -11,7 +11,7 @@ radius = 1.1601563
 font_size = 100
 font_color = Color(1, 0, 0, 1)
 
-[node name="endButton" type="Node3D"]
+[node name="EndButton" type="Node3D"]
 
 [node name="red button" parent="." instance=ExtResource("1_8n51h")]
 

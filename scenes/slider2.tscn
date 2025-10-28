@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0mumdft468mc"]
+
+[ext_resource type="PackedScene" uid="uid://1nkt8a43jdj" path="res://assets/meshs/slider 2 v2.glb" id="1_llp4m"]
+[ext_resource type="Script" uid="uid://bmwe60w8fyvwk" path="res://scripts/click_button_slider2.gd" id="2_pphgl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_llp4m"]
+size = Vector3(4.3603516, 0.18365479, 0.33691406)
+
+[node name="Slider2" type="Node3D"]
+
+[node name="slider 2 v2" parent="." instance=ExtResource("1_llp4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.6707673)
+
+[node name="Slider 2" parent="slider 2 v2/Slider 2 Area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8326777, 0.106644236, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="slider 2 v2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8468617, 0, -5.6707673)
+script = ExtResource("2_pphgl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="slider 2 v2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8439941, 0.10635376, 0.017211914)
+shape = SubResource("BoxShape3D_llp4m")
+
+[editable path="slider 2 v2"]
