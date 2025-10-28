@@ -1,26 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://lq3e2sh6jjmf"]
+[gd_scene load_steps=7 format=3 uid="uid://lq3e2sh6jjmf"]
 
-[ext_resource type="PackedScene" uid="uid://dvw31ccatngme" path="res://assets/meshs/red button.glb" id="1_8n51h"]
 [ext_resource type="Script" uid="uid://byg8nda8vr3k1" path="res://scripts/click_button_end.gd" id="2_8n51h"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_qkwot"]
-height = 1.3540039
-radius = 1.1601563
+[ext_resource type="PackedScene" uid="uid://ela2vqg1jmrj" path="res://assets/meshs/new end button/boite v2.glb" id="2_tjie5"]
+[ext_resource type="Material" uid="uid://cgnqrxx3hb28q" path="res://assets/materials/Glass.tres" id="3_dmms4"]
+[ext_resource type="PackedScene" uid="uid://dj8jciw1gocwv" path="res://assets/meshs/new end button/red button v3.glb" id="4_r1yfl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8n51h"]
 font_size = 100
 font_color = Color(1, 0, 0, 1)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qkwot"]
+height = 0.25097656
+radius = 0.234375
+
 [node name="EndButton" type="Node3D"]
-
-[node name="red button" parent="." instance=ExtResource("1_8n51h")]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="red button"]
-script = ExtResource("2_8n51h")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="red button/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008056641, 0)
-shape = SubResource("CylinderShape3D_qkwot")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -52,4 +45,25 @@ vertical_alignment = 1
 event_name = "event:/UI/STOP"
 event_guid = "{360d81d7-ce34-4418-9793-bdba916517cd}"
 
-[editable path="red button"]
+[node name="end button" type="Node3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="boite v2" parent="end button" instance=ExtResource("2_tjie5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.627853)
+
+[node name="Boite" parent="end button/boite v2/Axe Boite" index="0"]
+material_override = ExtResource("3_dmms4")
+
+[node name="red button v3" parent="end button" instance=ExtResource("4_r1yfl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 6.602)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="end button/red button v3/Boutton Rouge" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00088839233, -0.23621178, -0.013121605)
+script = ExtResource("2_8n51h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="end button/red button v3/Boutton Rouge/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2459935, 0.010996312)
+shape = SubResource("CylinderShape3D_qkwot")
+
+[editable path="end button/boite v2"]
+[editable path="end button/red button v3"]
