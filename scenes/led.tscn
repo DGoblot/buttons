@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtjph3jsdmlnr"]
+
+[ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="1_126cy"]
+[ext_resource type="Script" uid="uid://cja34udk8rmmb" path="res://scripts/led.gd" id="2_soycm"]
+
+[node name="Led 22" instance=ExtResource("1_126cy")]
+script = ExtResource("2_soycm")
