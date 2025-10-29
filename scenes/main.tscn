@@ -18,7 +18,7 @@
 [ext_resource type="Material" uid="uid://dhmjvswo3gxhy" path="res://assets/materials/blue.tres" id="13_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
 [ext_resource type="Material" uid="uid://u11sjfngnqqu" path="res://assets/materials/green.tres" id="14_gqmmt"]
-[ext_resource type="Material" path="res://assets/materials/red.tres" id="17_gqmmt"]
+[ext_resource type="Material" uid="uid://c7cd62aj3ysv" path="res://assets/materials/violet.tres" id="17_gqmmt"]
 [ext_resource type="Script" uid="uid://hvqlk7pxilww" path="res://scripts/start.gd" id="19_0ld40"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
