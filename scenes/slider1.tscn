@@ -1,26 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4xc76j6rfd28"]
+[gd_scene load_steps=5 format=3 uid="uid://b4xc76j6rfd28"]
 
-[ext_resource type="PackedScene" uid="uid://cjw51hpg1novv" path="res://assets/meshs/slider 1 v2.glb" id="1_sovo2"]
+[ext_resource type="PackedScene" uid="uid://cwnvrdej17vws" path="res://assets/meshs/slider 1 v3.glb" id="1_sovo2"]
 [ext_resource type="Script" uid="uid://b5hhjjw251vuj" path="res://scripts/click_button_slider1.gd" id="2_esdc5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_llp4m"]
-size = Vector3(2.0854492, 0.18365479, 0.36206055)
+size = Vector3(2.0854492, 0.08277893, 0.3717041)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sovo2"]
+size = Vector3(0.14672852, 0.12207031, 0.32226563)
 
 [node name="Slider1" type="Node3D"]
 
-[node name="slider 1 v2" parent="." instance=ExtResource("1_sovo2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.005848)
+[node name="slider 1 v3" parent="." instance=ExtResource("1_sovo2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0337493, 0, 6.093328)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="slider 1 v2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02690208, 0, -5.0087776)
+[node name="Slider 1" parent="slider 1 v3/Slider 1 Area" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1500001, 7.450581e-09, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="slider 1 v3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0068474, 0, -6.0962577)
 script = ExtResource("2_esdc5")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="slider 1 v2/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03955078, 0.10635376, 0.04711914)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="slider 1 v3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03955078, 0.041038513, 0.07305908)
 shape = SubResource("BoxShape3D_llp4m")
 
-[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
-event_name = "event:/UI/Slider"
-event_guid = "{10464fc3-393b-4dae-84a2-25636e5bb22e}"
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="slider 1 v3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9065032, 0.12927246, 0.06936303)
+shape = SubResource("BoxShape3D_sovo2")
 
-[editable path="slider 1 v2"]
+[node name="Volume 5_0" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Paramters/Volume0"
+event_guid = "{a1716787-671d-4d9f-8795-8ddfe62318d1}"
+
+[node name="Volume 4_5" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Paramters/Volume5"
+event_guid = "{ff978220-ca89-4558-bcf1-31226cae0639}"
+
+[node name="Volume 3_4" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Paramters/Volume4"
+event_guid = "{42a0e7d7-b77b-42a8-96ed-dc172c3e14c6}"
+
+[node name="Volume 2_3" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Paramters/Volume3"
+event_guid = "{13cb336f-ad72-42b7-a9a5-f708d16f6f21}"
+
+[node name="Volume 1_2" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Paramters/Volume2"
+event_guid = "{5aafe21f-298b-42a0-a392-b6ee28889d09}"
+
+[node name="Volume 0_1" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Paramters/Volume1"
+event_guid = "{19834b72-0062-4834-81c5-a12c824bfd5d}"
+
+[node name="Slide" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/SliderTik"
+event_guid = "{9e6170b7-a8e8-451c-b5b7-5d645608bebb}"
+
+[editable path="slider 1 v3"]
