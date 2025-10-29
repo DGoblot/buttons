@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
 [ext_resource type="Material" uid="uid://u11sjfngnqqu" path="res://assets/materials/green.tres" id="14_gqmmt"]
 [ext_resource type="Material" uid="uid://c7cd62aj3ysv" path="res://assets/materials/violet.tres" id="17_gqmmt"]
-[ext_resource type="Script" uid="uid://hvqlk7pxilww" path="res://scripts/start.gd" id="19_0ld40"]
+[ext_resource type="Script" path="res://scripts/start.gd" id="19_0ld40"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -257,7 +257,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29727697, 0.46623802, 1.26
 surface_material_override/0 = ExtResource("17_gqmmt")
 
 [node name="Son" parent="PoussoireZ" index="2"]
-event_name = "event:/Music/StopAllMusic"
 event_guid = "{e3b3e1e8-8d39-4783-bb10-0a659c59b807}"
 
 [node name="PoussoireL" parent="." instance=ExtResource("7_o6xl0")]
