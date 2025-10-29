@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=18 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bpi1ln8x702ip" path="res://scenes/tournant2.tscn" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://jylipnnlv78y" path="res://scenes/tournant3.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://drvlkuqc2tfsc" path="res://assets/meshs/table.glb" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -218,6 +219,54 @@ fov = 65.0
 
 [node name="table" parent="." instance=ExtResource("11_ya4ey")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.539486, 0.4789436, 2.4553013)
+
+[node name="Led 26" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591928, -0.82903737, 0, 0.82903737, 0.5591928, -5.0405674, -2.742, 1.899)
+
+[node name="Led 27" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591928, -0.82903737, 0, 0.82903737, 0.5591928, -3.3648176, -2.742, 1.899)
+
+[node name="Led 28" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591928, -0.82903737, 0, 0.82903737, 0.5591928, -4.1936216, -2.742, 1.899)
+
+[node name="Led 29" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290374, 0, 0.8290374, 0.55919284, -5.8693714, -2.742, 1.899)
+
+[node name="Led 23" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290375, 0, 0.8290375, 0.55919284, -8.386164, -2.742, 1.899)
+
+[node name="Led 24" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290374, 0, 0.8290374, 0.55919284, -6.710414, -2.742, 1.899)
+
+[node name="Led 25" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290375, 0, 0.8290375, 0.55919284, -7.539218, -2.742, 1.899)
+
+[node name="Led 30" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591928, -0.82903737, 0, 0.82903737, 0.5591928, -4.4227257, -2.2383442, 1.5358725)
+
+[node name="Led 31" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591928, -0.82903737, 0, 0.82903737, 0.5591928, -2.746976, -2.2383442, 1.5358725)
+
+[node name="Led 32" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591928, -0.82903737, 0, 0.82903737, 0.5591928, -3.57578, -2.2383442, 1.5358725)
+
+[node name="Led 33" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591928, -0.8290374, 0, 0.8290374, 0.5591928, -5.2515297, -2.2383442, 1.5358725)
+
+[node name="Led 34" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290374, 0, 0.8290374, 0.55919284, -7.768322, -2.2383442, 1.5358725)
+
+[node name="Led 35" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591928, -0.8290374, 0, 0.8290374, 0.5591928, -6.092572, -2.2383442, 1.5358725)
+
+[node name="Led 36" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290374, 0, 0.8290374, 0.55919284, -6.9213753, -2.2383442, 1.5358725)
+
+[node name="Led 37" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290375, 0, 0.8290375, 0.55919284, -8.597126, -2.2383442, 1.5358725)
+
+[node name="Led 22" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 0.5591929, -0.82903755, 0, 0.82903755, 0.5591929, -9.214968, -2.742, 1.899)
 
 [connection signal="lightBlue" from="FlipflopJaune/bouton FlipFlop 1 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_blue"]
 [connection signal="lightGreen" from="FlipflopVert/bouton FlipFlop 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_green"]
