@@ -1,5 +1,5 @@
 @tool
-extends Node2D
+extends Control
 
 const ScoreItem = preload("ScoreItem.tscn")
 const SWLogger = preload("res://addons/silent_wolf/utils/SWLogger.gd")
@@ -120,7 +120,7 @@ func clear_leaderboard() -> void:
 			c.queue_free()
 
 
-func _on_CloseButton_pressed() -> void:
+func _on_close_button_pressed() -> void:
 	var scene_name = SilentWolf.scores_config.open_scene_on_close
 	SWLogger.info("Closing SilentWolf leaderboard, switching to scene: " + str(scene_name))
 	#global.reset()
