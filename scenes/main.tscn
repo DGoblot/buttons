@@ -1,6 +1,5 @@
-[gd_scene load_steps=24 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=23 format=3 uid="uid://016gu0llc2ce"]
 
-[ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://c0mumdft468mc" path="res://scenes/slider2.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dt8vqfi0wyxon" path="res://scenes/flipflop1.tscn" id="2_jyhfs"]
@@ -19,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
 [ext_resource type="Material" uid="uid://u11sjfngnqqu" path="res://assets/materials/green.tres" id="14_gqmmt"]
 [ext_resource type="Material" uid="uid://c7cd62aj3ysv" path="res://assets/materials/violet.tres" id="17_gqmmt"]
-[ext_resource type="Script" path="res://scripts/start.gd" id="19_0ld40"]
+[ext_resource type="Script" uid="uid://hvqlk7pxilww" path="res://scripts/start.gd" id="19_0ld40"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -35,7 +34,6 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_eb6dy")
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="."]
 bank_paths = ["res://assets/banks/Desktop/Master.strings.bank", "res://assets/banks/Desktop/Master.bank"]
@@ -53,7 +51,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.427707, 0.5056131, 3.72171
 
 [node name="EndGame" parent="endButton" index="4"]
 event_name = "event:/UI/EndGame"
-event_guid = "{00000000-0000-0000-0000-000000000000}"
 
 [node name="FlipflopJaune" parent="." instance=ExtResource("2_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10800457, 0.44019413, 2.7692738)
@@ -257,6 +254,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29727697, 0.46623802, 1.26
 surface_material_override/0 = ExtResource("17_gqmmt")
 
 [node name="Son" parent="PoussoireZ" index="2"]
+event_name = "event:/Music/StopAllMusic"
 event_guid = "{e3b3e1e8-8d39-4783-bb10-0a659c59b807}"
 
 [node name="PoussoireL" parent="." instance=ExtResource("7_o6xl0")]
@@ -371,6 +369,7 @@ event_name = "event:/Ambiences/Cigales"
 event_guid = "{c3480509-c1d5-44df-9029-b9f8a63eb0b4}"
 
 [node name="CigalesStop" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Ambiences/CigalesStop"
 event_guid = "{ff37f1e4-16d9-4cd8-a5e6-b591461c02b5}"
 
 [node name="ColorRect" type="ColorRect" parent="."]
