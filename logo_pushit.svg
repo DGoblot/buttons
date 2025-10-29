@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1294.34 936.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cf1f12;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #5e8bdb;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <g>
+      <g>
+        <polygon class="cls-2" points="698.44 263.04 433.82 395.95 433.35 488.87 710.22 632.55 961.37 491.5 961.84 398.58 698.44 263.04"/>
+        <line class="cls-2" x1="433.82" y1="395.95" x2="710.68" y2="539.64"/>
+        <line class="cls-2" x1="961.84" y1="398.58" x2="710.68" y2="539.64"/>
+        <line class="cls-2" x1="710.22" y1="632.55" x2="710.68" y2="539.64"/>
+      </g>
+      <g>
+        <polygon class="cls-1" points="704.59 279.7 547.83 358.43 547.56 413.47 711.57 498.59 860.34 415.03 860.62 359.99 704.59 279.7"/>
+        <line class="cls-1" x1="547.83" y1="358.43" x2="711.84" y2="443.55"/>
+        <line class="cls-1" x1="860.62" y1="359.99" x2="711.84" y2="443.55"/>
+        <line class="cls-1" x1="711.57" y1="498.59" x2="711.84" y2="443.55"/>
+      </g>
+    </g>
+  </g>
+  <g id="Layer_11" data-name="Layer 11">
+    <image width="2388" height="1668" transform="translate(419.44 360.94) scale(.16)" xlink:href="../Downloads/Untitled_Artwork 33.png"/>
+  </g>
+</svg>

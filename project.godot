@@ -14,10 +14,10 @@ General/banks_path="res://assets/banks/Desktop"
 
 [application]
 
-config/name="Buttons!"
+config/name="Push it"
 run/main_scene="uid://016gu0llc2ce"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://c1sss4t4mkbdg"
 
 [autoload]
 
