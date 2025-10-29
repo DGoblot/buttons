@@ -41,6 +41,55 @@ label_settings = SubResource("LabelSettings_8n51h")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="YourScore" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -266.0
+offset_right = 128.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Your score :"
+label_settings = SubResource("LabelSettings_8n51h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = 107.0
+offset_right = 191.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Your name here"
+alignment = 1
+
+[node name="Submit" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = 175.0
+offset_right = 102.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Submit"
+
 [node name="CasingOpen" type="FmodEventEmitter3D" parent="."]
 event_name = "event:/UI/CasingOpen"
 event_guid = "{51193c56-edfd-495e-8479-21278644936f}"
