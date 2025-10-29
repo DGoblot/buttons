@@ -87,7 +87,8 @@ event_guid = "{81369360-5c3c-4b74-9b07-698daacc2821}"
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.16611463, 0.4752015, 3.3989613)
 
 [node name="Click" parent="FlipflopVert" index="1"]
-event_guid = "{00000000-0000-0000-4063-189df47f0000}"
+event_name = "event:/UI/Switch"
+event_guid = "{6f17bc15-a906-4baa-9405-6a4929ca099e}"
 
 [node name="TournantVert" parent="." instance=ExtResource("7_tipki")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60624874, 0.44529146, 1.7421088)
@@ -313,7 +314,7 @@ transform = Transform3D(1, 0, 0, 0, 0.5591929, -0.82903755, 0, 0.82903755, 0.559
 [editable path="SliderJauneB"]
 [editable path="SliderJauneB/slider 2 v2"]
 [editable path="SliderBleu"]
-[editable path="SliderBleu/slider 1 v2"]
+[editable path="SliderBleu/slider 1 v3"]
 [editable path="FlipflopBleuA"]
 [editable path="FlipflopBleuA/bouton FlipFlop 2 v2"]
 [editable path="FlipflopBleuB"]
