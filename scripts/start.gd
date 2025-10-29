@@ -10,12 +10,6 @@ var speed = 1.0
 func done():
 	starting = true
 
-func _on_accept_1_pressed() -> void:
-	done()
-
-func _on_accept_2_pressed() -> void:
-	done()
-
 func _process(delta: float) -> void:
 	if starting == true:
 		t_fade += delta * speed
@@ -25,3 +19,11 @@ func _process(delta: float) -> void:
 		button2.visible = false
 	if t_fade > speed:
 		queue_free()
+
+
+func _on_accept_1_pressed() -> void:
+	done()
+
+
+func _on_accept_2_pressed() -> void:
+	done()

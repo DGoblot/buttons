@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=23 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
@@ -18,6 +18,7 @@
 [ext_resource type="Material" uid="uid://dhmjvswo3gxhy" path="res://assets/materials/blue.tres" id="13_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
 [ext_resource type="Material" uid="uid://u11sjfngnqqu" path="res://assets/materials/green.tres" id="14_gqmmt"]
+[ext_resource type="Script" uid="uid://hvqlk7pxilww" path="res://scripts/start.gd" id="19_0ld40"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -359,6 +360,65 @@ event_guid = "{c3480509-c1d5-44df-9029-b9f8a63eb0b4}"
 [node name="CigalesStop" type="FmodEventEmitter3D" parent="."]
 event_guid = "{ff37f1e4-16d9-4cd8-a5e6-b591461c02b5}"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("19_0ld40")
+
+[node name="Accept1" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = 124.0
+offset_right = -28.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "  J'ai lu et j'accepte  "
+
+[node name="Accept2" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = 124.0
+offset_right = 259.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "  J'ai pas lu et j'accepte  "
+
+[node name="Label" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -368.0
+offset_top = -172.0
+offset_right = 368.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Je m’engage à ne pas divulguer les informations confidentielles qui me sont confiées, quelles qu’elles soient. En cas de fuite, [color=red]j’assume pleinement les conséquences[/color], qu’elles soient juridiques ou simplement gênantes. Cet engagement reste valable jusqu’à ce que je me souvienne plus très bien de ce que je devais garder secret."
+horizontal_alignment = 3
+
 [connection signal="lightBlue" from="FlipflopJaune/bouton FlipFlop 1 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_blue"]
 [connection signal="lightGreen" from="FlipflopVert/bouton FlipFlop 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_green"]
 [connection signal="clicked" from="TournantRougeA/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
@@ -374,6 +434,8 @@ event_guid = "{ff37f1e4-16d9-4cd8-a5e6-b591461c02b5}"
 [connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
 [connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeC/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
 [connection signal="lightRed" from="TournantJaune/bouton tournant 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_red"]
+[connection signal="pressed" from="ColorRect/Accept1" to="ColorRect" method="_on_accept_1_pressed"]
+[connection signal="pressed" from="ColorRect/Accept2" to="ColorRect" method="_on_accept_2_pressed"]
 
 [editable path="endButton"]
 [editable path="endButton/end button/boite v2"]
