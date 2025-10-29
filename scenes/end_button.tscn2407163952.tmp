@@ -126,7 +126,6 @@ script = ExtResource("2_8n51h")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2459935, 0.010996312)
 shape = SubResource("CylinderShape3D_qkwot")
 
-[connection signal="text_changed" from="ColorRect/LineEdit" to="end button/red button v3/Boutton Rouge/StaticBody3D" method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="ColorRect/Submit" to="end button/red button v3/Boutton Rouge/StaticBody3D" method="_on_submit_pressed"]
 
 [editable path="end button/boite v2"]

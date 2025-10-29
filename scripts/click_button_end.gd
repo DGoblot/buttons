@@ -20,6 +20,8 @@ var text_appear = 1.9
 var waiting_for_button := false
 var wait_timer := 0.0
 var wait_limit := 5.0
+var score = 0
+var player_name = ""
 
 var end = false
 
@@ -42,6 +44,7 @@ func _input_event(camera, event, click_position, click_normal, shape_idx):
 					current_step = 1
 					waiting_for_button = true
 					wait_timer = 0.0
+					open.play()
 				1:
 					animButton.play("Push Bouton Rouge")
 					current_step = 2
@@ -60,6 +63,7 @@ func _process(delta: float) -> void:
 				waiting_for_button = false
 				current_step = 0
 				animBox.play_backwards("Open Up")
+				close.play()
 	else:
 		t_fade += delta * speed
 		blackScreen.color = Color(Color.BLACK, t_fade)
@@ -69,3 +73,10 @@ func _process(delta: float) -> void:
 			lineEdit.visible = true
 			submitButton.visible = true
 			label.text = str(t_total).pad_decimals(2)
+
+
+func _on_submit_pressed() -> void:
+	player_name = lineEdit.text
+	score = t_total * 100
+	SilentWolf.Scores.save_score(player_name, score)
+	get_tree().change_scene_to_file("res://addons/silent_wolf/Scores/Leaderboard.tscn")
