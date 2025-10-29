@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=16 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://c0mumdft468mc" path="res://scenes/slider2.tscn" id="2_0wfyh"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bpi1ln8x702ip" path="res://scenes/tournant2.tscn" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://jylipnnlv78y" path="res://scenes/tournant3.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://drvlkuqc2tfsc" path="res://assets/meshs/table.glb" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="12_eb6dy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -150,3 +151,51 @@ fov = 65.0
 
 [node name="table" parent="." instance=ExtResource("11_ya4ey")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.539486, 0.4789436, 2.4553013)
+
+[node name="Led 23" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.55919296, -0.82903767, 0, 0.82903767, 0.55919296, -8.624502, -2.742, 1.899)
+
+[node name="Led 26" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.559193, -0.8290377, 0, 0.8290377, 0.559193, -5.8309155, -2.742, 1.899)
+
+[node name="Led 27" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.5591931, -0.82903785, 0, 0.82903785, 0.5591931, -4.4162846, -2.742, 1.899)
+
+[node name="Led 28" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.559193, -0.8290377, 0, 0.8290377, 0.559193, -5.0792847, -2.742, 1.899)
+
+[node name="Led 29" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.559193, -0.8290377, 0, 0.8290377, 0.559193, -6.493881, -2.742, 1.899)
+
+[node name="Led 24" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.559193, -0.8290377, 0, 0.8290377, 0.559193, -7.2098713, -2.742, 1.899)
+
+[node name="Led 25" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.55919296, -0.82903767, 0, 0.82903767, 0.55919296, -7.8728714, -2.742, 1.899)
+
+[node name="Led 30" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.559193, -0.8290377, 0, 0.8290377, 0.559193, -8.520752, -2.248722, 1.5574995)
+
+[node name="Led 31" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.5591931, -0.82903785, 0, 0.82903785, 0.5591931, -5.727165, -2.248722, 1.5574995)
+
+[node name="Led 32" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.5591931, -0.82903785, 0, 0.82903785, 0.5591931, -4.3125343, -2.248722, 1.5574995)
+
+[node name="Led 33" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.5591931, -0.82903785, 0, 0.82903785, 0.5591931, -4.9755344, -2.248722, 1.5574995)
+
+[node name="Led 34" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.5591931, -0.82903785, 0, 0.82903785, 0.5591931, -6.390131, -2.248722, 1.5574995)
+
+[node name="Led 35" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.5591931, -0.82903785, 0, 0.82903785, 0.5591931, -7.106121, -2.248722, 1.5574995)
+
+[node name="Led 36" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.559193, -0.8290377, 0, 0.8290377, 0.559193, -7.769121, -2.248722, 1.5574995)
+
+[node name="Led 37" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.55919296, -0.82903767, 0, 0.82903767, 0.55919296, -9.183718, -2.248722, 1.5574995)
+
+[node name="Led 22" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 0.5588167, -0.82929134, 0, 0.82929134, 0.5588167, -9.287468, -2.7419508, 1.8994712)
