@@ -51,6 +51,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10800457, 0.44019413, 2.76
 [node name="SliderJauneA" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3858124, 0.5018424, 2.1994753)
 
+[node name="FilterOn" parent="SliderJauneA/slider 2 v2" index="4"]
+event_name = "event:/Paramters/HighPassOn"
+event_guid = "{14ac5680-519f-4c4f-ae4f-2b3ef1eddd54}"
+
+[node name="FilterOff" parent="SliderJauneA/slider 2 v2" index="5"]
+event_name = "event:/Paramters/HighPassOff"
+event_guid = "{f79d2b30-7462-47d8-932d-c8cbfe2f5a7c}"
+
 [node name="SliderJauneB" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.019015, 0.5043399, 2.2064698)
 
@@ -288,6 +296,10 @@ transform = Transform3D(1, 0, 0, 0, 0.5591929, -0.82903755, 0, 0.82903755, 0.559
 [editable path="endButton/end button/red button v3"]
 [editable path="FlipflopJaune"]
 [editable path="FlipflopJaune/bouton FlipFlop 1 v2"]
+[editable path="SliderJauneA"]
+[editable path="SliderJauneA/slider 2 v2"]
+[editable path="SliderJauneB"]
+[editable path="SliderJauneB/slider 2 v2"]
 [editable path="FlipflopVert"]
 [editable path="FlipflopVert/bouton FlipFlop 3 v2"]
 [editable path="TournantVert"]

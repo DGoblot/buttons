@@ -29,4 +29,18 @@ shape = SubResource("BoxShape3D_llp4m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01373291, 0.111328125, 0.01953125)
 shape = SubResource("BoxShape3D_pphgl")
 
+[node name="SonSlider" type="FmodEventEmitter3D" parent="slider 2 v2"]
+event_name = "event:/UI/Slider"
+event_guid = "{10464fc3-393b-4dae-84a2-25636e5bb22e}"
+
+[node name="FilterOn" type="FmodEventEmitter3D" parent="slider 2 v2"]
+event_name = "event:/Paramters/LowPassOn"
+event_guid = "{caf0cc88-9883-4791-bf7b-c9e2e7da5b47}"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.6707673)
+
+[node name="FilterOff" type="FmodEventEmitter3D" parent="slider 2 v2"]
+event_name = "event:/Paramters/LowPassOff"
+event_guid = "{bee67a07-7cff-463f-9038-6371f68e55f0}"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.6707673)
+
 [editable path="slider 2 v2"]
