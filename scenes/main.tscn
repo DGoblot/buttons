@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=23 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://drvlkuqc2tfsc" path="res://assets/meshs/table.glb" id="11_ya4ey"]
 [ext_resource type="Material" uid="uid://l3v6xcmw41b3" path="res://assets/materials/yellow.tres" id="12_dp3eg"]
 [ext_resource type="Material" uid="uid://dhmjvswo3gxhy" path="res://assets/materials/blue.tres" id="13_0ld40"]
+[ext_resource type="PackedScene" uid="uid://c8ocsnopp5osf" path="res://assets/meshs/absolute fafa.glb" id="13_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
 [ext_resource type="Material" uid="uid://u11sjfngnqqu" path="res://assets/materials/green.tres" id="14_gqmmt"]
 
@@ -104,6 +105,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05097103, 0.482076, 4.1836
 
 [node name="Bouton Tournant 2" parent="TournantRougeA/bouton tournant 2 v2/Base Tournant 2" index="0"]
 surface_material_override/1 = ExtResource("12_dp3eg")
+
+[node name="absolute fafa2" parent="TournantRougeA/bouton tournant 2 v2/Base Tournant 2" index="1" instance=ExtResource("13_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -14.150312, -3.114978, -4.493934)
 
 [node name="Ambiance" parent="TournantRougeA" index="1"]
 event_name = "event:/Ambiences/Autorote"
