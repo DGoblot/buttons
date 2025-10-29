@@ -434,7 +434,9 @@ horizontal_alignment = 3
 [connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
 [connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeC/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
 [connection signal="lightRed" from="TournantJaune/bouton tournant 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_red"]
+[connection signal="pressed" from="ColorRect/Accept1" to="endButton/end button/red button v3/Boutton Rouge/StaticBody3D" method="_on_accept_1_pressed"]
 [connection signal="pressed" from="ColorRect/Accept1" to="ColorRect" method="_on_accept_1_pressed"]
+[connection signal="pressed" from="ColorRect/Accept2" to="endButton/end button/red button v3/Boutton Rouge/StaticBody3D" method="_on_accept_2_pressed"]
 [connection signal="pressed" from="ColorRect/Accept2" to="ColorRect" method="_on_accept_2_pressed"]
 
 [editable path="endButton"]

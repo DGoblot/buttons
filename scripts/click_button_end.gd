@@ -80,3 +80,12 @@ func _on_submit_pressed() -> void:
 	score = t_total * 100
 	SilentWolf.Scores.save_score(player_name, score)
 	get_tree().change_scene_to_file("res://addons/silent_wolf/Scores/Leaderboard.tscn")
+
+func _timer_start():
+	t_total = 0.0
+
+func _on_accept_1_pressed() -> void:
+	_timer_start()
+
+func _on_accept_2_pressed() -> void:
+	_timer_start()
