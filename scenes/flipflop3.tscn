@@ -23,5 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.027740479, 0.070251465, 0.
 shape = SubResource("BoxShape3D_llp4m")
 
 [node name="Click" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/SliderTik"
+event_guid = "{9e6170b7-a8e8-451c-b5b7-5d645608bebb}"
 
 [editable path="bouton FlipFlop 3 v2"]

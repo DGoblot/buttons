@@ -1,5 +1,8 @@
 extends DirectionalLight3D
 
+@onready var cigales = $"../CIGALES"
+@onready var pacigales = $"../CigalesStop"
+
 var onBlue = false
 var changingBlue = false
 var onGreen = false
@@ -12,6 +15,7 @@ var speedGreen = 5.0
 var tGreen = 0
 var speedRed = 0.5
 var tRed = 0
+var cigalesPlaying = false
 
 func _process(delta: float) -> void:
 	if changingBlue:
@@ -38,6 +42,17 @@ func _process(delta: float) -> void:
 			light_color.r = lerp(0, 1, tRed)
 		if tRed > 1:
 			changingRed = false
+	if light_color.b < 1 and light_color.r < 1 and light_color.g < 1:
+		if cigalesPlaying == false:
+			playCigales()
+			cigalesPlaying = true
+
+	elif light_color.b > 0 or  light_color.r > 0 or  light_color.g > 0:
+		if cigalesPlaying == true:
+			stopCigales()
+			cigalesPlaying = false
+
+
 
 func _on_static_body_3d_light_blue() -> void:
 	if onBlue:
@@ -64,3 +79,11 @@ func _on_static_body_3d_light_red() -> void:
 		onRed = true
 	tRed = 0.0
 	changingRed = true
+
+func playCigales():
+	if cigalesPlaying == false:
+		cigales.play()
+		
+func stopCigales():
+	if cigalesPlaying == true:
+		pacigales.play()

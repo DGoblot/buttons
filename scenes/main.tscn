@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=23 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
@@ -14,7 +14,11 @@
 [ext_resource type="Script" uid="uid://bdgd5lxmbwxi6" path="res://scripts/click_button_flipflip2_2.gd" id="8_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://jylipnnlv78y" path="res://scenes/tournant3.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://drvlkuqc2tfsc" path="res://assets/meshs/table.glb" id="11_ya4ey"]
+[ext_resource type="Material" uid="uid://l3v6xcmw41b3" path="res://assets/materials/yellow.tres" id="12_dp3eg"]
+[ext_resource type="Material" uid="uid://dhmjvswo3gxhy" path="res://assets/materials/blue.tres" id="13_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
+[ext_resource type="Material" uid="uid://u11sjfngnqqu" path="res://assets/materials/green.tres" id="14_gqmmt"]
+[ext_resource type="Script" uid="uid://hvqlk7pxilww" path="res://scripts/start.gd" id="19_0ld40"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -45,6 +49,10 @@ script = ExtResource("2_trceg")
 
 [node name="endButton" parent="." instance=ExtResource("1_o5qli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.427707, 0.5056131, 3.721713)
+
+[node name="EndGame" parent="endButton" index="4"]
+event_name = "event:/UI/EndGame"
+event_guid = "{00000000-0000-0000-0000-000000000000}"
 
 [node name="FlipflopJaune" parent="." instance=ExtResource("2_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10800457, 0.44019413, 2.7692738)
@@ -96,6 +104,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60624874, 0.44529146, 1.742
 [node name="TournantRougeA" parent="." instance=ExtResource("8_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05097103, 0.482076, 4.1836824)
 
+[node name="Bouton Tournant 2" parent="TournantRougeA/bouton tournant 2 v2/Base Tournant 2" index="0"]
+surface_material_override/1 = ExtResource("12_dp3eg")
+
 [node name="Ambiance" parent="TournantRougeA" index="1"]
 event_name = "event:/Ambiences/Autorote"
 event_guid = "{bac99206-1911-4bdc-a72c-066372bf6628}"
@@ -103,11 +114,17 @@ event_guid = "{bac99206-1911-4bdc-a72c-066372bf6628}"
 [node name="TournantRougeB" parent="." instance=ExtResource("8_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7089639, 0.4787699, 4.1823444)
 
+[node name="Bouton Tournant 2" parent="TournantRougeB/bouton tournant 2 v2/Base Tournant 2" index="0"]
+surface_material_override/1 = ExtResource("12_dp3eg")
+
 [node name="CollisionShape3D" parent="TournantRougeB/bouton tournant 2 v2/StaticBody3D" index="0"]
 transform = Transform3D(0.9999656, 0, -0.008290219, 0, 1, 0, 0.008290219, 0, 0.9999656, 0.038140774, 0.20192897, 0.040918827)
 
 [node name="TournantRougeC" parent="." instance=ExtResource("8_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3510387, 0.47874492, 4.189648)
+
+[node name="Bouton Tournant 2" parent="TournantRougeC/bouton tournant 2 v2/Base Tournant 2" index="0"]
+surface_material_override/1 = ExtResource("13_0ld40")
 
 [node name="Ambiance" parent="TournantRougeC" index="1"]
 event_name = "event:/Ambiences/Forest"
@@ -115,6 +132,9 @@ event_guid = "{cb41e66e-b5b0-4acd-940c-216ee7448987}"
 
 [node name="TournantRougeD" parent="." instance=ExtResource("8_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9745352, 0.4724481, 4.1953526)
+
+[node name="Bouton Tournant 2" parent="TournantRougeD/bouton tournant 2 v2/Base Tournant 2" index="0"]
+surface_material_override/1 = ExtResource("14_gqmmt")
 
 [node name="CollisionShape3D" parent="TournantRougeD/bouton tournant 2 v2/StaticBody3D" index="0"]
 transform = Transform3D(0.99999636, -0.0026878037, 0, 0.0026878037, 0.99999636, 0, 0, 0, 1, 0.038140774, 0.20192897, 0.040918827)
@@ -129,12 +149,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65889126, 0.46865225, 3.07
 [node name="PoussoireA" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4871745, 0.47833985, 3.1078172)
 
+[node name="Bouton Poussoire" parent="PoussoireA/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("13_0ld40")
+
 [node name="Son" parent="PoussoireA" index="2"]
 event_name = "event:/SFX/Buendia"
 event_guid = "{aec99281-2a59-4df9-b828-1752ce8cb681}"
 
 [node name="PoussoireB" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4396772, 0.47862995, 3.1035595)
+
+[node name="Bouton Poussoire" parent="PoussoireB/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("12_dp3eg")
 
 [node name="Son" parent="PoussoireB" index="2"]
 event_name = "event:/SFX/DubSiren"
@@ -143,12 +169,18 @@ event_guid = "{ce76625b-9d1b-4947-b6b3-74534366a61c}"
 [node name="PoussoireC" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3913186, 0.47750723, 3.1122642)
 
+[node name="Bouton Poussoire" parent="PoussoireC/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("13_0ld40")
+
 [node name="Son" parent="PoussoireC" index="2"]
 event_name = "event:/Music/MusicChillPop"
 event_guid = "{227047db-a00d-4bf3-864e-205d45adc6de}"
 
 [node name="PoussoireD" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4871039, 0.505943, 2.1698084)
+
+[node name="Bouton Poussoire" parent="PoussoireD/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("14_gqmmt")
 
 [node name="Son" parent="PoussoireD" index="2"]
 event_name = "event:/Music/MusicBretz"
@@ -157,12 +189,18 @@ event_guid = "{be2a8657-f9c6-413b-bcd2-8c954cb48f0c}"
 [node name="PoussoireF" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4300878, 0.46632135, 2.159556)
 
+[node name="Bouton Poussoire" parent="PoussoireF/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("14_gqmmt")
+
 [node name="Son" parent="PoussoireF" index="2"]
 event_name = "event:/SFX/Philip"
 event_guid = "{ecaba3b3-16cc-486f-938e-15b3cccd96ad}"
 
 [node name="PoussoireG" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3912194, 0.4781171, 2.150054)
+
+[node name="Bouton Poussoire" parent="PoussoireG/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("14_gqmmt")
 
 [node name="Son" parent="PoussoireG" index="2"]
 event_name = "event:/SFX/Burps"
@@ -171,12 +209,18 @@ event_guid = "{5b90483a-913d-4299-b9b2-3b9bf7a1eec4}"
 [node name="PoussoireH" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3468437, 0.48205703, 2.1392891)
 
+[node name="Bouton Poussoire" parent="PoussoireH/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("14_gqmmt")
+
 [node name="Son" parent="PoussoireH" index="2"]
 event_name = "event:/Music/MusicJUNGLE"
 event_guid = "{5968cfcc-6709-4699-9b79-8ae3074b1910}"
 
 [node name="PoussoireI" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3566895, 0.48067105, 1.2426643)
+
+[node name="Bouton Poussoire" parent="PoussoireI/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("13_0ld40")
 
 [node name="Son" parent="PoussoireI" index="2"]
 event_name = "event:/SFX/Degol"
@@ -185,12 +229,18 @@ event_guid = "{4fcf4d0b-f9bc-45c0-91bd-5287ff046809}"
 [node name="PoussoireJ" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3959239, 0.47837073, 1.2417455)
 
+[node name="Bouton Poussoire" parent="PoussoireJ/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("12_dp3eg")
+
 [node name="Son" parent="PoussoireJ" index="2"]
 event_name = "event:/SFX/Jah"
 event_guid = "{7e574038-94d8-409e-b165-f7486a7f7de7}"
 
 [node name="PoussoireK" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4442823, 0.47949344, 1.2330408)
+
+[node name="Bouton Poussoire" parent="PoussoireK/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("13_0ld40")
 
 [node name="Son" parent="PoussoireK" index="2"]
 event_name = "event:/Music/MusicJVKawaii"
@@ -199,12 +249,18 @@ event_guid = "{e17e12cc-fb6d-4c66-b537-7b8e199be302}"
 [node name="PoussoireL" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49178, 0.47920334, 1.2372985)
 
+[node name="Bouton Poussoire" parent="PoussoireL/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("12_dp3eg")
+
 [node name="Son" parent="PoussoireL" index="2"]
 event_name = "event:/SFX/Walkie"
 event_guid = "{efc16241-8e70-4c1c-8597-e3399f1eee46}"
 
 [node name="PoussoireN" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4472787, 0.4809487, 0.2986951)
+
+[node name="Bouton Poussoire" parent="PoussoireN/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("12_dp3eg")
 
 [node name="Son" parent="PoussoireN" index="2"]
 event_name = "event:/SFX/MetalPipe"
@@ -213,6 +269,9 @@ event_guid = "{bdae01fe-d4a6-4cdd-afc7-b1631e7ac6f5}"
 [node name="PoussoireM" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4947767, 0.4806586, 0.30295277)
 
+[node name="Bouton Poussoire" parent="PoussoireM/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("12_dp3eg")
+
 [node name="Son" parent="PoussoireM" index="2"]
 event_name = "event:/Music/MusicDUBSTEP"
 event_guid = "{1835c967-524a-49e5-9e72-bef6ef775d3a}"
@@ -220,12 +279,18 @@ event_guid = "{1835c967-524a-49e5-9e72-bef6ef775d3a}"
 [node name="PoussoireO" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3989198, 0.47982597, 0.30739975)
 
+[node name="Bouton Poussoire" parent="PoussoireO/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("13_0ld40")
+
 [node name="Son" parent="PoussoireO" index="2"]
 event_name = "event:/SFX/Bijoux"
 event_guid = "{26d89b18-9b32-4bc6-ac02-d85e09bc4912}"
 
 [node name="PoussoireP" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.359686, 0.4821263, 0.30831861)
+
+[node name="Bouton Poussoire" parent="PoussoireP/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("14_gqmmt")
 
 [node name="Son" parent="PoussoireP" index="2"]
 event_name = "event:/Music/MusicHouse"
@@ -288,6 +353,72 @@ transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290375, 0, 0.8290375, 0.5591
 [node name="Led 22" parent="." instance=ExtResource("14_a8y0u")]
 transform = Transform3D(1, 0, 0, 0, 0.5591929, -0.82903755, 0, 0.82903755, 0.5591929, -9.214968, -2.742, 1.899)
 
+[node name="CIGALES" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Ambiences/Cigales"
+event_guid = "{c3480509-c1d5-44df-9029-b9f8a63eb0b4}"
+
+[node name="CigalesStop" type="FmodEventEmitter3D" parent="."]
+event_guid = "{ff37f1e4-16d9-4cd8-a5e6-b591461c02b5}"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("19_0ld40")
+
+[node name="Accept1" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = 124.0
+offset_right = -28.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "  J'ai lu et j'accepte  "
+
+[node name="Accept2" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = 124.0
+offset_right = 259.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "  J'ai pas lu et j'accepte  "
+
+[node name="Label" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -368.0
+offset_top = -172.0
+offset_right = 368.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Je m’engage à ne pas divulguer les informations confidentielles qui me sont confiées, quelles qu’elles soient. En cas de fuite, [color=red]j’assume pleinement les conséquences[/color], qu’elles soient juridiques ou simplement gênantes. Cet engagement reste valable jusqu’à ce que je me souvienne plus très bien de ce que je devais garder secret."
+horizontal_alignment = 3
+
 [connection signal="lightBlue" from="FlipflopJaune/bouton FlipFlop 1 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_blue"]
 [connection signal="lightGreen" from="FlipflopVert/bouton FlipFlop 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_green"]
 [connection signal="clicked" from="TournantRougeA/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
@@ -303,6 +434,8 @@ transform = Transform3D(1, 0, 0, 0, 0.5591929, -0.82903755, 0, 0.82903755, 0.559
 [connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
 [connection signal="clicked" from="TournantRougeD/bouton tournant 2 v2/StaticBody3D" to="TournantRougeC/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
 [connection signal="lightRed" from="TournantJaune/bouton tournant 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_red"]
+[connection signal="pressed" from="ColorRect/Accept1" to="ColorRect" method="_on_accept_1_pressed"]
+[connection signal="pressed" from="ColorRect/Accept2" to="ColorRect" method="_on_accept_2_pressed"]
 
 [editable path="endButton"]
 [editable path="endButton/end button/boite v2"]
