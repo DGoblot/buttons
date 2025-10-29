@@ -72,7 +72,7 @@ func _process(delta: float) -> void:
 			yourScoreLabel.visible = true
 			lineEdit.visible = true
 			submitButton.visible = true
-			label.text = str(t_total).pad_decimals(2)
+			label.text = str(t_total*100).pad_decimals(0)
 
 
 func _on_submit_pressed() -> void:

@@ -161,7 +161,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4396772, 0.47862995, 3.103
 surface_material_override/0 = ExtResource("12_dp3eg")
 
 [node name="AnimationPlayer" parent="PoussoireB/bouton poussoire v2" index="1"]
-speed_scale = 3.0
+speed_scale = 12.0
 
 [node name="Son" parent="PoussoireB" index="2"]
 event_name = "event:/SFX/DubSiren"
@@ -388,14 +388,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -224.0
+offset_left = -384.0
 offset_top = 124.0
-offset_right = -28.0
+offset_right = -74.0
 offset_bottom = 160.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
-text = "  J'ai lu et j'accepte  "
+text = "  I read this text and I accept it  "
 
 [node name="Accept2" type="Button" parent="ColorRect"]
 layout_mode = 1
@@ -404,14 +404,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 24.0
+offset_left = -48.0
 offset_top = 124.0
-offset_right = 259.0
+offset_right = 429.0
 offset_bottom = 160.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
-text = "  J'ai pas lu et j'accepte  "
+text = "  I haven't read this text, and I couldn't care less  "
 
 [node name="Label" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 1
@@ -421,14 +421,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -368.0
-offset_top = -172.0
+offset_top = -220.0
 offset_right = 368.0
 offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
-text = "Je m’engage à ne pas divulguer les informations confidentielles qui me sont confiées, quelles qu’elles soient. En cas de fuite, [color=red]j’assume pleinement les conséquences[/color], qu’elles soient juridiques ou simplement gênantes. Cet engagement reste valable jusqu’à ce que je me souvienne plus très bien de ce que je devais garder secret."
+text = "[color=red]DISCLAIMER[/color]
+
+I pledge not to disclose any confidential information entrusted to me, whatever its nature. In the event of a leak, [color=red]I fully accept the consequences[/color], whether legal or simply embarrassing. This commitment remains valid until I can no longer clearly remember what I was supposed to keep secret."
 horizontal_alignment = 3
 
 [connection signal="lightBlue" from="FlipflopJaune/bouton FlipFlop 1 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_blue"]
