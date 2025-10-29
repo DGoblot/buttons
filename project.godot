@@ -25,6 +25,10 @@ FmodManager="*res://addons/fmod/FmodManager.gd"
 SilentWolf="*res://addons/silent_wolf/SilentWolf.gd"
 Global="*res://scripts/global.gd"
 
+[display]
+
+window/size/mode=2
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/fmod/plugin.cfg", "res://addons/silent_wolf/plugin.cfg")

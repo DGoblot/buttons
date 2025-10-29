@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=24 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
@@ -18,6 +18,7 @@
 [ext_resource type="Material" uid="uid://dhmjvswo3gxhy" path="res://assets/materials/blue.tres" id="13_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
 [ext_resource type="Material" uid="uid://u11sjfngnqqu" path="res://assets/materials/green.tres" id="14_gqmmt"]
+[ext_resource type="Material" path="res://assets/materials/red.tres" id="17_gqmmt"]
 [ext_resource type="Script" uid="uid://hvqlk7pxilww" path="res://scripts/start.gd" id="19_0ld40"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
@@ -162,6 +163,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4396772, 0.47862995, 3.103
 [node name="Bouton Poussoire" parent="PoussoireB/bouton poussoire v2/Base Poussoire " index="0"]
 surface_material_override/0 = ExtResource("12_dp3eg")
 
+[node name="AnimationPlayer" parent="PoussoireB/bouton poussoire v2" index="1"]
+speed_scale = 3.0
+
 [node name="Son" parent="PoussoireB" index="2"]
 event_name = "event:/SFX/DubSiren"
 event_guid = "{ce76625b-9d1b-4947-b6b3-74534366a61c}"
@@ -245,6 +249,16 @@ surface_material_override/0 = ExtResource("13_0ld40")
 [node name="Son" parent="PoussoireK" index="2"]
 event_name = "event:/Music/MusicJVKawaii"
 event_guid = "{e17e12cc-fb6d-4c66-b537-7b8e199be302}"
+
+[node name="PoussoireZ" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29727697, 0.46623802, 1.2623054)
+
+[node name="Bouton Poussoire" parent="PoussoireZ/bouton poussoire v2/Base Poussoire " index="0"]
+surface_material_override/0 = ExtResource("17_gqmmt")
+
+[node name="Son" parent="PoussoireZ" index="2"]
+event_name = "event:/Music/StopAllMusic"
+event_guid = "{e3b3e1e8-8d39-4783-bb10-0a659c59b807}"
 
 [node name="PoussoireL" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49178, 0.47920334, 1.2372985)
@@ -488,6 +502,8 @@ horizontal_alignment = 3
 [editable path="PoussoireJ/bouton poussoire v2"]
 [editable path="PoussoireK"]
 [editable path="PoussoireK/bouton poussoire v2"]
+[editable path="PoussoireZ"]
+[editable path="PoussoireZ/bouton poussoire v2"]
 [editable path="PoussoireL"]
 [editable path="PoussoireL/bouton poussoire v2"]
 [editable path="PoussoireN"]
