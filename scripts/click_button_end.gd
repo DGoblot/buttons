@@ -7,11 +7,12 @@ extends StaticBody3D
 @onready var stop = $"../../../../Stop"
 @onready var open = $"../../../../CasingOpen"
 @onready var close = $"../../../../CasingClose"
+@onready var endGame = $"../../../../EndGame"
 var current_step := 0
 var t_total = 0.0
 var t_fade = 0.0
-var speed = 1.0
-var text_appear = 1.5
+var speed = 0.5
+var text_appear = 1.9
 var waiting_for_button := false
 var wait_timer := 0.0
 var wait_limit := 5.0
@@ -42,6 +43,7 @@ func _input_event(camera, event, click_position, click_normal, shape_idx):
 					waiting_for_button = false
 					blackScreen.visible = true
 					stop.play()
+					endGame.play()
 			
 func _process(delta: float) -> void:
 	if !end:

@@ -53,6 +53,10 @@ event_guid = "{f36b87d8-dd82-49c7-a907-260503a9eda8}"
 event_name = "event:/UI/STOP"
 event_guid = "{360d81d7-ce34-4418-9793-bdba916517cd}"
 
+[node name="EndGame" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/SFX/EndGame"
+event_guid = "{693852bd-1ee4-4fca-bef9-9e4a85aea221}"
+
 [node name="end button" type="Node3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
