@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=22 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
@@ -11,12 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://ct5kvv76udp3e" path="res://scenes/poussoire.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://12w04pn76ahp" path="res://scenes/tournant1.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://bpi1ln8x702ip" path="res://scenes/tournant2.tscn" id="8_85g3d"]
-[ext_resource type="Script" path="res://scripts/click_button_flipflip2_2.gd" id="8_jkv2x"]
+[ext_resource type="Script" uid="uid://bdgd5lxmbwxi6" path="res://scripts/click_button_flipflip2_2.gd" id="8_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://jylipnnlv78y" path="res://scenes/tournant3.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://drvlkuqc2tfsc" path="res://assets/meshs/table.glb" id="11_ya4ey"]
 [ext_resource type="Material" uid="uid://l3v6xcmw41b3" path="res://assets/materials/yellow.tres" id="12_dp3eg"]
 [ext_resource type="Material" uid="uid://dhmjvswo3gxhy" path="res://assets/materials/blue.tres" id="13_0ld40"]
-[ext_resource type="PackedScene" uid="uid://c8ocsnopp5osf" path="res://assets/meshs/absolute fafa.glb" id="13_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
 [ext_resource type="Material" uid="uid://u11sjfngnqqu" path="res://assets/materials/green.tres" id="14_gqmmt"]
 
@@ -52,6 +51,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.427707, 0.5056131, 3.72171
 
 [node name="EndGame" parent="endButton" index="4"]
 event_name = "event:/UI/EndGame"
+event_guid = "{00000000-0000-0000-0000-000000000000}"
 
 [node name="FlipflopJaune" parent="." instance=ExtResource("2_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10800457, 0.44019413, 2.7692738)
@@ -105,9 +105,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05097103, 0.482076, 4.1836
 
 [node name="Bouton Tournant 2" parent="TournantRougeA/bouton tournant 2 v2/Base Tournant 2" index="0"]
 surface_material_override/1 = ExtResource("12_dp3eg")
-
-[node name="absolute fafa2" parent="TournantRougeA/bouton tournant 2 v2/Base Tournant 2" index="1" instance=ExtResource("13_gqmmt")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -14.150312, -3.114978, -4.493934)
 
 [node name="Ambiance" parent="TournantRougeA" index="1"]
 event_name = "event:/Ambiences/Autorote"
@@ -360,7 +357,6 @@ event_name = "event:/Ambiences/Cigales"
 event_guid = "{c3480509-c1d5-44df-9029-b9f8a63eb0b4}"
 
 [node name="CigalesStop" type="FmodEventEmitter3D" parent="."]
-event_name = "event:/Ambiences/CigalesStop"
 event_guid = "{ff37f1e4-16d9-4cd8-a5e6-b591461c02b5}"
 
 [connection signal="lightBlue" from="FlipflopJaune/bouton FlipFlop 1 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_blue"]
