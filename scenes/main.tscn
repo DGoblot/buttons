@@ -121,35 +121,28 @@ event_name = "event:/Music/MusicChillPop"
 event_guid = "{227047db-a00d-4bf3-864e-205d45adc6de}"
 
 [node name="PoussoireD" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0267537, 0.505943, 2.1698084)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4871039, 0.505943, 2.1698084)
 
 [node name="Son" parent="PoussoireD" index="2"]
 event_name = "event:/Music/MusicBretz"
 event_guid = "{be2a8657-f9c6-413b-bcd2-8c954cb48f0c}"
 
-[node name="PoussoireE" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.972821, 0.48079932, 2.1751742)
-
-[node name="Son" parent="PoussoireE" index="2"]
-event_name = "event:/SFX/EndGame"
-event_guid = "{693852bd-1ee4-4fca-bef9-9e4a85aea221}"
-
 [node name="PoussoireF" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9217448, 0.46632135, 2.159556)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4300878, 0.46632135, 2.159556)
 
 [node name="Son" parent="PoussoireF" index="2"]
 event_name = "event:/SFX/Philip"
 event_guid = "{ecaba3b3-16cc-486f-938e-15b3cccd96ad}"
 
 [node name="PoussoireG" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8828764, 0.4781171, 2.150054)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3912194, 0.4781171, 2.150054)
 
 [node name="Son" parent="PoussoireG" index="2"]
 event_name = "event:/SFX/Burps"
 event_guid = "{5b90483a-913d-4299-b9b2-3b9bf7a1eec4}"
 
 [node name="PoussoireH" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.838501, 0.48205703, 2.1392891)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3468437, 0.48205703, 2.1392891)
 
 [node name="Son" parent="PoussoireH" index="2"]
 event_name = "event:/Music/MusicJUNGLE"
@@ -308,8 +301,6 @@ transform = Transform3D(1, 0, 0, 0, 0.5591929, -0.82903755, 0, 0.82903755, 0.559
 [editable path="PoussoireC/bouton poussoire v2"]
 [editable path="PoussoireD"]
 [editable path="PoussoireD/bouton poussoire v2"]
-[editable path="PoussoireE"]
-[editable path="PoussoireE/bouton poussoire v2"]
 [editable path="PoussoireF"]
 [editable path="PoussoireF/bouton poussoire v2"]
 [editable path="PoussoireG"]
