@@ -288,6 +288,14 @@ transform = Transform3D(1, 0, 0, 0, 0.55919284, -0.8290375, 0, 0.8290375, 0.5591
 [node name="Led 22" parent="." instance=ExtResource("14_a8y0u")]
 transform = Transform3D(1, 0, 0, 0, 0.5591929, -0.82903755, 0, 0.82903755, 0.5591929, -9.214968, -2.742, 1.899)
 
+[node name="CIGALES" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Ambiences/Cigales"
+event_guid = "{c3480509-c1d5-44df-9029-b9f8a63eb0b4}"
+
+[node name="CigalesStop" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Ambiences/CigalesStop"
+event_guid = "{ff37f1e4-16d9-4cd8-a5e6-b591461c02b5}"
+
 [connection signal="lightBlue" from="FlipflopJaune/bouton FlipFlop 1 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_blue"]
 [connection signal="lightGreen" from="FlipflopVert/bouton FlipFlop 3 v2/StaticBody3D" to="DirectionalLight3D" method="_on_static_body_3d_light_green"]
 [connection signal="clicked" from="TournantRougeA/bouton tournant 2 v2/StaticBody3D" to="TournantRougeB/bouton tournant 2 v2/StaticBody3D" method="_on_static_body_3d_clicked"]
