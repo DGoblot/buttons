@@ -22,4 +22,8 @@ script = ExtResource("2_6ef55")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012939453, 0.10635376, 0.0078125)
 shape = SubResource("BoxShape3D_llp4m")
 
+[node name="Click" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/Switch"
+event_guid = "{6f17bc15-a906-4baa-9405-6a4929ca099e}"
+
 [editable path="bouton FlipFlop 1 v2"]

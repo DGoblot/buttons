@@ -12,6 +12,9 @@ radius = 0.17089844
 [node name="bouton tournant 2 v2" parent="." instance=ExtResource("1_goa23")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046446204, -1.1920929e-07, 3.5937564)
 
+[node name="Bouton Tournant 2" parent="bouton tournant 2 v2/Base Tournant 2" index="0"]
+transform = Transform3D(-1.6292068e-07, 0, -1, 0, 1, 0, 1, 0, -1.6292068e-07, 0, 0.23191357, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="bouton tournant 2 v2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051766634, 0, -3.6318953)
 script = ExtResource("2_1j5jo")
@@ -19,5 +22,13 @@ script = ExtResource("2_1j5jo")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bouton tournant 2 v2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038140744, 0.20192897, 0.040918723)
 shape = SubResource("CylinderShape3D_tg4ww")
+
+[node name="Ambiance" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Ambiences/Beach"
+event_guid = "{7cbbd16b-48ab-42f3-b15a-1609c6b54db7}"
+
+[node name="Click" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/Switch"
+event_guid = "{6f17bc15-a906-4baa-9405-6a4929ca099e}"
 
 [editable path="bouton tournant 2 v2"]

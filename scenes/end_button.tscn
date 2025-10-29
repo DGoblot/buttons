@@ -41,7 +41,15 @@ label_settings = SubResource("LabelSettings_8n51h")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+[node name="CasingOpen" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/CasingOpen"
+event_guid = "{51193c56-edfd-495e-8479-21278644936f}"
+
+[node name="CasingClose" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/UI/CasingClose"
+event_guid = "{f36b87d8-dd82-49c7-a907-260503a9eda8}"
+
+[node name="Stop" type="FmodEventEmitter3D" parent="."]
 event_name = "event:/UI/STOP"
 event_guid = "{360d81d7-ce34-4418-9793-bdba916517cd}"
 

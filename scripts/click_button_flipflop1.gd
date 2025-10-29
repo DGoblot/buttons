@@ -1,7 +1,10 @@
 extends StaticBody3D
 
 @onready var anim = $"../AnimationPlayer"
+@onready var click = $"../../Click"
 var state = "off"
+
+signal lightBlue
 
 func _input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -10,6 +13,10 @@ func _input_event(camera, event, click_position, click_normal, shape_idx):
 			if state == "off":
 				anim.play("Flip 1")
 				state = "on"
+				click.play()
+				emit_signal("lightBlue")
 			else:
 				anim.play("Flop 1")
 				state = "off"
+				click.play()
+				emit_signal("lightBlue")
