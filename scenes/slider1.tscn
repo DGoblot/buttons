@@ -15,7 +15,7 @@ size = Vector3(0.14672852, 0.12207031, 0.32226563)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0337493, 0, 6.093328)
 
 [node name="Slider 1" parent="slider 1 v3/Slider 1 Area" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1500001, 7.450581e-09, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.56999993, 7.450581e-09, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="slider 1 v3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0068474, 0, -6.0962577)

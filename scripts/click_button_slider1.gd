@@ -9,12 +9,12 @@ extends StaticBody3D
 @onready var vol4_5 = $"../../Volume 4_5"
 @onready var vol5_0 = $"../../Volume 5_0"
 
-var state = 2
+var state = 4
 var animLength
 
 func _ready() -> void:
 	anim.speed_scale = 0.8
-	vol1_2.play()
+	vol3_4.play()
 
 func _input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventMouseButton:
