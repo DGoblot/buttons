@@ -22,4 +22,10 @@ script = ExtResource("2_sm0c6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012939453, 0.10635376, 0.0078125)
 shape = SubResource("BoxShape3D_llp4m")
 
+[node name="Tick" type="FmodEventEmitter3D" parent="bouton FlipFlop 2 v2"]
+event_name = "event:/UI/SliderTik"
+event_guid = "{9e6170b7-a8e8-451c-b5b7-5d645608bebb}"
+
+[node name="PitchPlus" type="FmodEventEmitter2D" parent="bouton FlipFlop 2 v2"]
+
 [editable path="bouton FlipFlop 2 v2"]

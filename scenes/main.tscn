@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://016gu0llc2ce"]
+[gd_scene load_steps=19 format=3 uid="uid://016gu0llc2ce"]
 
 [ext_resource type="Script" uid="uid://buat0i5qqhyi1" path="res://scripts/main.gd" id="1_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://lq3e2sh6jjmf" path="res://scenes/end_button.tscn" id="1_o5qli"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ct5kvv76udp3e" path="res://scenes/poussoire.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://12w04pn76ahp" path="res://scenes/tournant1.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://bpi1ln8x702ip" path="res://scenes/tournant2.tscn" id="8_85g3d"]
+[ext_resource type="Script" uid="uid://bdgd5lxmbwxi6" path="res://scripts/click_button_flipflip2_2.gd" id="8_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://jylipnnlv78y" path="res://scenes/tournant3.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://drvlkuqc2tfsc" path="res://assets/meshs/table.glb" id="11_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://bao3ys0mu5xtm" path="res://assets/meshs/Led 2.glb" id="14_a8y0u"]
@@ -68,8 +69,19 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.61
 [node name="FlipflopBleuA" parent="." instance=ExtResource("5_tbgi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9990957, 0.4894173, 3.9965305)
 
+[node name="StaticBody3D" parent="FlipflopBleuA/bouton FlipFlop 2 v2" index="2"]
+script = ExtResource("8_jkv2x")
+
+[node name="PitchPlus" parent="FlipflopBleuA/bouton FlipFlop 2 v2" index="4"]
+event_name = "event:/Paramters/PitchPlus"
+event_guid = "{73c49631-1fc1-46ec-b4ee-3abc1e1a4840}"
+
 [node name="FlipflopBleuB" parent="." instance=ExtResource("5_tbgi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5710433, 0.48972565, 3.9979405)
+
+[node name="PitchPlus" parent="FlipflopBleuB/bouton FlipFlop 2 v2" index="4"]
+event_name = "event:/Paramters/PitchMinus"
+event_guid = "{81369360-5c3c-4b74-9b07-698daacc2821}"
 
 [node name="FlipflopVert" parent="." instance=ExtResource("6_tefeu")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.16611463, 0.4752015, 3.3989613)
@@ -300,6 +312,12 @@ transform = Transform3D(1, 0, 0, 0, 0.5591929, -0.82903755, 0, 0.82903755, 0.559
 [editable path="SliderJauneA/slider 2 v2"]
 [editable path="SliderJauneB"]
 [editable path="SliderJauneB/slider 2 v2"]
+[editable path="SliderBleu"]
+[editable path="SliderBleu/slider 1 v2"]
+[editable path="FlipflopBleuA"]
+[editable path="FlipflopBleuA/bouton FlipFlop 2 v2"]
+[editable path="FlipflopBleuB"]
+[editable path="FlipflopBleuB/bouton FlipFlop 2 v2"]
 [editable path="FlipflopVert"]
 [editable path="FlipflopVert/bouton FlipFlop 3 v2"]
 [editable path="TournantVert"]
